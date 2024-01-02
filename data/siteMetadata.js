@@ -15,6 +15,21 @@ const siteMetadata = {
   twitter: 'https://twitter.com/@sarthakcodes',
   linkedin: 'https://www.linkedin.com/in/sarthakagrawal927/',
   locale: 'en-US',
+  title: 'Significant Hobbies Blog',
+  author: 'Sarthak Agrawal',
+  headerTitle: 'Significant Hobbies',
+  description: 'A blog on philosophy, psychology, productivity, startups, technology, and more.',
+  language: 'en-us',
+  theme: 'system', // system, dark or light
+  siteUrl: 'https://blog.significanthobbies.com/',
+  siteRepo: 'https://github.com/sarthakagrawal927/personalsite',
+  siteLogo: '/static/images/logo.png',
+  socialBanner: '/static/images/twitter-card.png',
+  email: 'sarthakagrawal927@gmail.com',
+  github: 'https://github.com/sarthakagrawal927',
+  twitter: 'https://twitter.com/@sarthakcodes',
+  linkedin: 'https://www.linkedin.com/in/sarthakagrawal927/',
+  locale: 'en-US',
   analytics: {
     // If you want to use an analytics provider you have to add it to the
     // content security policy in the `next.config.js` file.
