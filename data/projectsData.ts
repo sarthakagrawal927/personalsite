@@ -1,7 +1,7 @@
 const projectsData = [
   {
     title: 'Stumble',
-    description: `A social media application rekindle old school conversation by the advent of technology.`,
+    description: `A social media application that rekindles old school conversation by the advent of technology.`,
     // imgSrc: '/static/images/google.png',
     href: 'https://getstumble.app/',
   },
