@@ -10,10 +10,10 @@ const projectsData = [
     href: 'https://github.com/orgs/Significant-Hobbies/repositories',
   },
   {
-    title: 'The sci-fi novel',
-    description: `In distant future, 2116, the world is controlled, not ruled, by artificial intelligence . The scientists have finally figured out a way for time travel in the past by various experiments. They sent robots in past (2024) accompanied by a man in past to collect data...Coming SOON`,
-    // imgSrc: '/static/images/time-machine.jpg',
-    href: '/about',
+    title: 'The Time Machine',
+    description: 'A sci-fi novel about time travel and artificial intelligence taking control, set in the year 2116. Time travel experiments have been successful, leading to a mission in 2024 to collect data in the past.',
+    
+    href: 'https://www.example.com/the-time-machine',
   },
 ]
 
