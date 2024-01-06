@@ -1,9 +1,8 @@
 const projectsData = [
   {
-    title: 'Stumble',
-    description: `A social media application rekindle old school conversation by the advent of technology.`,
-    // imgSrc: '/static/images/google.png',
-    href: 'https://getstumble.app/',
+    title: 'A Search Engine',
+    description: 'A search engine that provides fast and accurate search results for users.',
+    href: 'https://www.example.com/search-engine',
   },
   {
     title: 'Productivity App',
