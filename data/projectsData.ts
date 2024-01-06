@@ -22,4 +22,4 @@ const projectsData = [ // Updated commit message to provide clear summary of cha
   },
 ]
 
-export default projectsData
+export default projectsData;
