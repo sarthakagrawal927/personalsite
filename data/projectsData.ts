@@ -6,7 +6,7 @@ const projectsData = [
     href: 'https://getstumble.app/',
   },
   {
-    title: 'Productivity App',
+    title: 'All-in-One Productivity Application',
     description: 'A productivity app aiming to do everything 4 other applications in my phone are not able to efficiently do. Biased app that aims to people the best version of themselves',
     href: 'https://github.com/orgs/Significant-Hobbies/repositories',
   },
