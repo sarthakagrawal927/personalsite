@@ -7,7 +7,7 @@ const projectsData = [
   },
   {
     title: 'All-in-One Productivity Application',
-    description: 'A productivity app aiming to do everything 4 other applications in my phone are not able to efficiently do. Biased app that aims to people the best version of themselves',
+    description: 'A productivity app that aims to do everything 4 other applications on my phone are not able to efficiently do. It is designed to help people become the best version of themselves',
     href: 'https://github.com/orgs/Significant-Hobbies/repositories',
   },
   {
