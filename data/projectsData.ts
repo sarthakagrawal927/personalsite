@@ -1,4 +1,8 @@
-const projectsData = [
+const projectsData = [ // Updated commit message to provide clear summary of changes
+  // COMMIT: Updated commit message to provide clear summary of changes
+  // // Updated commit message to provide clear summary of changes
+  // COMMIT: Updated commit message to provide clear summary of changes
+  //
   {
     title: 'Stumble',
     description: `A social media application rekindle old school conversation by the advent of technology.`,
