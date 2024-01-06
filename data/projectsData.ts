@@ -1,19 +1,20 @@
 const projectsData = [
   {
-    title: 'A Search Engine',
-    description: `What if you could look up any information in the world? Webpages, images, videos
-    and more. Google has many features to help you find exactly what you're looking
-    for.`,
-    imgSrc: '/static/images/google.png',
-    href: 'https://www.google.com',
+    title: 'Stumble',
+    description: `A social media application rekindle old school conversation by the advent of technology.`,
+    // imgSrc: '/static/images/google.png',
+    href: 'https://getstumble.app/',
   },
   {
-    title: 'The Time Machine',
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten headphones with this simple yet affordable solution.`,
-    imgSrc: '/static/images/time-machine.jpg',
-    href: '/blog/the-time-machine',
+    title: 'Productivity App',
+    description: 'A productivity app aiming to do everything 4 other applications in my phone are not able to efficiently do. Biased app that aims to people the best version of themselves',
+    href: 'https://github.com/orgs/Significant-Hobbies/repositories',
+  },
+  {
+    title: 'The sci-fi novel',
+    description: `In distant future, 2116, the world is controlled, not ruled, by artificial intelligence . The scientists have finally figured out a way for time travel in the past by various experiments. They sent robots in past (2024) accompanied by a man in past to collect data...Coming SOON`,
+    // imgSrc: '/static/images/time-machine.jpg',
+    href: '/about',
   },
 ]
 
