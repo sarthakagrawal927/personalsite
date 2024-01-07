@@ -1,6 +1,6 @@
-import projectsData from '@/data/projectsData';
-import Card from '@/components/Card';
-import { genPageMetadata } from 'app/seo';
+import projectsData from '@/data/projectsData'
+import Card from '@/components/Card'
+import { genPageMetadata } from 'app/seo'
 
 export const metadata = genPageMetadata({ title: 'Projects' })
 
@@ -13,7 +13,8 @@ export default function Projects() {
             Projects
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            Most of my projects are openly available at github, feel free to check them out there. I will be adding non-public projects here.
+            Most of my projects are openly available at github, feel free to check them out there. I
+            will be adding non-public projects here.
           </p>
         </div>
         <div className="container py-12">
