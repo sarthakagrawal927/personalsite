@@ -1,9 +1,9 @@
 const projectsData = [
   {
     title: 'Stumble',
-    description: `A social media application rekindle old school conversation by the advent of technology.`,
-    // imgSrc: '/static/images/google.png',
-    href: 'https://getstumble.app/',
+        description: `A social media application rekindle old school conversation by the advent of technology.`,
+
+        href: 'https://getstumble.app/',
   },
   {
     title: 'All-in-One Productivity Application',
@@ -13,8 +13,8 @@ const projectsData = [
   },
   {
     title: 'The sci-fi novel',
-    description: `In distant future, 2116, the world is controlled, not ruled, by artificial intelligence . The scientists have finally figured out a way for time travel in the past by various experiments. They sent robots in past (2024) accompanied by a man in past to collect data...Coming SOON`,
-    imgSrc: '/static/images/time-machine.jpg',
+        description: `In distant future, 2116, the world is controlled, not ruled, by artificial intelligence . The scientists have finally figured out a way for time travel in the past by various experiments. They sent robots in past (2024) accompanied by a man in past to collect data...Coming SOON`,
+
   },
 ]
 
