@@ -6,7 +6,7 @@ const siteMetadata = {
   description: 'A blog on philosophy, psychology, productivity, startups, technology, and more.',
   language: 'en-us',
   theme: 'system', // system, dark, light, or custom
-  siteUrl: 'https://blog.significanthobbies.com/',
+  siteUrl: 'https://blog.significanthobbies.com',
   siteRepo: 'https://github.com/sarthakagrawal927/personalsite',
   siteLogo: '/static/images/logo.png',
   socialBanner: '/static/images/twitter-card.png',
