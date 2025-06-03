@@ -14,7 +14,7 @@ This year has was more eventful than last. But I am still far from satisfied wit
 - [Watching plenty of Anime](https://www.imdb.com/list/ls563738714/)
 - Went out much more, played a lot of sports and met new people.
 - Got some bad habits (they are the target of elimination), improved some others.
-- Achieved daily steps goal.$$
+- Achieved daily steps goal.
 - Worked and ideated on bunch of side projects, but nothing concrete came out of it.
 
 ## Goals for 2025
