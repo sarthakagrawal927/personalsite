@@ -7,6 +7,42 @@ interface Project {
 
 const projectsData: Project[] = [
   {
+    title: 'Resume Tailor',
+    description:
+      'A LaTeX resume editor with AI-powered job tailoring and cover letter generation. Paste a job description, get a tuned resume and matching cover letter.',
+    href: 'https://github.com/sarthakagrawal927/resume-tailor',
+  },
+  {
+    title: 'Reel Maker',
+    description:
+      'An AI-powered TikTok/Reels video generator built on Remotion — scripted scenes, voiceover, captions, and programmatic compositing.',
+    href: 'https://github.com/sarthakagrawal927/reel-maker',
+  },
+  {
+    title: 'Starboard',
+    description:
+      'Organize and filter your GitHub starred repos. Tagging, search, and grouping on top of the GitHub API to make large star lists usable again.',
+    href: 'https://github.com/sarthakagrawal927/starboard',
+  },
+  {
+    title: 'LoopTV',
+    description:
+      'A TV-like random YouTube player with 13 stations and 36K quality-filtered videos, auto-tagged using a HuggingFace NER pipeline.',
+    href: 'https://github.com/sarthakagrawal927/looptv',
+  },
+  {
+    title: 'NanoClaw',
+    description:
+      'A lightweight containerized messaging agent on Anthropic\'s Agents SDK — connects WhatsApp, Telegram, Slack, Discord, and Gmail with memory and scheduled jobs.',
+    href: 'https://github.com/sarthakagrawal927/nanoclaw',
+  },
+  {
+    title: 'Email Manager',
+    description:
+      'A Gmail manager built on Next.js, NextAuth, and the Gmail API. Browse, search, compose, and mass-unsubscribe from a clean keyboard-driven UI.',
+    href: 'https://github.com/sarthakagrawal927/email-manager',
+  },
+  {
     title: 'Open Historia',
     description:
       'An LLM-powered grand strategy simulation game where AI controls nations with a diplomacy engine, dynamic 3D maps via Three.js, and multi-provider AI support.',
