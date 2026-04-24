@@ -1,85 +1,71 @@
-# Significant Hobbies Blog
+# agents.md — personalsite
 
-Personal blog for Sarthak Agrawal covering philosophy, psychology, productivity, startups, and tech. Live at `blog.significanthobbies.com`.
+## Purpose
+Personal blog (significanthobbies.com) covering philosophy, psychology, productivity, startups, and technology — MDX-powered, statically generated.
 
-## Tech Stack
+## Stack
+- Framework: Next.js 16 (App Router)
+- Language: TypeScript
+- Styling: Tailwind CSS v4 + `@tailwindcss/typography`. Primary color: Tailwind pink
+- Content: Contentlayer2 (MDX) — posts compiled at build time
+- Search: kbar (local JSON index)
+- Analytics: Umami (`NEXT_UMAMI_ID` env var)
+- DB: None
+- Auth: None
+- Testing: None configured
+- Deploy: Vercel
+- Package manager: pnpm (`.yarnrc.yml` is a legacy artifact — use pnpm)
+- Node: 24.x required
 
-- **Framework**: Next.js 13.5.6 (App Router)
-- **Styling**: Tailwind CSS 3 + `@tailwindcss/typography` + `@tailwindcss/forms`
-- **Content**: Contentlayer2 (MDX) -- blog posts in `data/blog/`, author bios in `data/authors/`
-- **Search**: kbar (local JSON-based search)
-- **Analytics**: Umami (via pliny)
-- **Comments**: Giscus (currently disabled)
-- **Font**: Space Grotesk (Google Fonts)
-- **Theme**: Dark/light via `next-themes`, class-based
-- **Linting**: ESLint + Prettier, Husky + lint-staged
-- **Package manager**: Yarn 3.6.1
-- **Node**: 24.x
-- **Template**: timlrx/tailwind-nextjs-starter-blog
-
-## Architecture
-
+## Repo structure
 ```
-app/                    # Next.js App Router pages
-  layout.tsx            # Root layout (font, theme, analytics, search, header/footer)
-  page.tsx              # Home -- latest 5 posts
-  Main.tsx              # Home page component
-  blog/                 # /blog + /blog/[...slug] dynamic post pages
-  about/                # /about page
-  projects/             # /projects page
-  tags/                 # /tags + /tags/[tag] pages
-  tag-data.json         # Auto-generated tag counts
-components/             # Reusable UI (Header, Footer, Tag, Card, MDXComponents, etc.)
-layouts/                # Post/author page layouts (PostLayout, PostSimple, PostBanner, ListLayout, AuthorLayout)
+app/
+  page.tsx             # Home (latest 5 posts)
+  Main.tsx             # Home component
+  blog/                # /blog listing + /blog/[...slug] post pages
+  about/               # About page
+  projects/            # Projects showcase
+  tags/                # /tags + /tags/[tag] filtered views
+  tag-data.json        # Auto-generated tag counts (do NOT edit manually)
+  layout.tsx           # Root layout (font, theme, analytics, header/footer)
+components/            # Header, Footer, Tag, Card, MDXComponents, etc.
+layouts/               # PostLayout, PostSimple, PostBanner, AuthorLayout
 data/
-  blog/                 # MDX blog posts organized by year (2023/, 2024/, 2025/)
-  authors/default.mdx   # Author bio
-  siteMetadata.js       # Global site config
-  headerNavLinks.ts     # Nav link definitions
-  projectsData.ts       # Projects showcase data
-css/                    # tailwind.css + prism.css
-public/static/          # Static assets (images, favicons)
-scripts/                # postbuild.mjs (RSS generation)
-contentlayer.config.ts  # Blog + Authors document types, MDX plugins
+  blog/                # MDX posts by year (2023/, 2024/, 2025/)
+  authors/default.mdx  # Author bio
+  siteMetadata.js      # Global config (URLs, social links, analytics ID)
+  projectsData.ts      # Projects list
+  headerNavLinks.ts    # Nav links
+css/
+  tailwind.css         # Tailwind entry + global styles
+  prism.css            # Code block syntax highlighting
+public/static/         # Images, favicons
+scripts/
+  postbuild.mjs        # Generates RSS feed post-build
+contentlayer.config.ts # MDX pipeline (remark/rehype plugins, computed fields)
 ```
 
-### Data Flow
-
-1. MDX files in `data/blog/` processed by Contentlayer2 at build time
-2. Generated typed content in `.contentlayer/generated/`
-3. `pliny` utilities sort/filter posts
-4. Build generates `tag-data.json` and `public/search.json`
-5. Postbuild generates RSS feed
-
-## Key Conventions
-
-- **Path aliases**: `@/components/*`, `@/data/*`, `@/layouts/*`, `@/css/*`
-- **Primary color**: `colors.pink` (Tailwind theme)
-- **Prettier**: no semicolons, single quotes, 100 char width
-- **Blog frontmatter**: `title`, `date` (required), `tags`, `summary`, `draft`, `authors`, `layout`, `images`
-- **Layouts selectable per post** via frontmatter `layout` field
-- **MDX plugins**: remark-gfm, remark-math, rehype-katex, rehype-prism-plus, rehype-citation
-
-## Commands
-
+## Key commands
 ```bash
-yarn dev          # Start dev server
-yarn build        # Production build (+ postbuild RSS)
-yarn serve        # Start production server
-yarn lint         # ESLint with --fix
-yarn analyze      # Bundle analysis
+pnpm dev        # next dev
+pnpm build      # next build + postbuild (RSS generation)
+pnpm start      # next start
+pnpm lint       # next lint --fix
+ANALYZE=true pnpm build   # Bundle analysis
 ```
 
-## Environment Variables
+## Architecture notes
+- **Content pipeline**: Contentlayer2 transforms `data/blog/**/*.mdx` into typed objects at build time. Import from `contentlayer/generated`.
+- **Computed fields**: `readingTime`, `slug`, `path`, `toc` auto-computed from each MDX file.
+- **Blog frontmatter**: `title` (required), `date` (required), `tags`, `summary`, `draft`, `authors`, `layout`, `images`.
+- **Three layout variants**: set `layout` in frontmatter → `PostLayout` / `PostSimple` / `PostBanner` (default: `PostLayout`).
+- **`app/tag-data.json`**: auto-generated during build — never edit manually.
+- **RSS**: generated by `scripts/postbuild.mjs` after `next build`.
+- **Theme**: dark/light via `next-themes` (class-based). Primary color is Tailwind pink.
+- **Security headers**: strict CSP, HSTS, X-Frame-Options in `next.config.js`.
+- **Giscus comments**: configured but disabled (set to null).
+- **kbar search**: local JSON index generated at build.
+- Only active env var: `NEXT_UMAMI_ID`. Other vars in `.env.example` are template leftovers.
+- Prettier: no semicolons, single quotes, 100-char line width.
 
-```
-NEXT_UMAMI_ID     # Umami analytics website ID (active)
-```
-
-Other newsletter/comment vars in `.env.example` are template leftovers and not wired up.
-
-## Current State
-
-- **Working**: Blog with 30+ posts (2023-2025), projects page, about page, tags, search, dark mode, RSS, SEO/OpenGraph
-- **Disabled**: Comments system (Giscus config exists but set to null)
-- **Status**: Paused -- no recent feature development, content-ready
+## Active context
