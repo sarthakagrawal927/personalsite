@@ -48,3 +48,4 @@ yarn-error.log*
 
 # OpenNext / Cloudflare
 .open-next
+.pages-deploy
