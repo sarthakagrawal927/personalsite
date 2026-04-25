@@ -7,7 +7,9 @@
     "build": "cross-env INIT_CWD=$PWD next build --webpack && node ./scripts/postbuild.mjs",
     "serve": "next start",
     "analyze": "cross-env ANALYZE=true next build",
-    "lint": "next lint --fix --dir pages --dir app --dir components --dir lib --dir layouts --dir scripts"
+    "lint": "next lint --fix --dir pages --dir app --dir components --dir lib --dir layouts --dir scripts",
+    "cf:build": "opennextjs-cloudflare build",
+    "deploy": "pnpm cf:build && wrangler deploy"
   },
   "dependencies": {
     "@next/bundle-analyzer": "16.2.4",
@@ -41,6 +43,7 @@
     "unist-util-visit": "^5.1.0"
   },
   "devDependencies": {
+    "@opennextjs/cloudflare": "^1.19.4",
     "@saas-maker/eslint-config": "^1.0.1",
     "@saas-maker/prettier-config": "^1.0.0",
     "@saas-maker/tsconfig": "^1.0.0",
@@ -58,7 +61,8 @@
     "lint-staged": "^16.4.0",
     "prettier": "^3.8.3",
     "prettier-plugin-tailwindcss": "^0.7.3",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "wrangler": "^4.85.0"
   },
   "resolutions": {
     "@opentelemetry/api": "1.4.1",

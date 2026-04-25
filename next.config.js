@@ -67,7 +67,8 @@ module.exports = () => {
       dirs: ['app', 'components', 'layouts', 'scripts'],
     },
     images: {
-      domains: ['picsum.photos'],
+      unoptimized: true,
+      remotePatterns: [{ hostname: 'picsum.photos' }],
     },
     async headers() {
       return [

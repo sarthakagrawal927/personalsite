@@ -1,0 +1,9 @@
+name = "personalsite"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+main = ".open-next/worker.js"
+assets = { directory = ".open-next/assets" }
+
+[vars]
+NODE_ENV = "production"
+NEXT_PUBLIC_SAASMAKER_API_KEY = "pk_c708622a311fc7539fc06448fd4fdb1f1a56db011bd79b5c"
