@@ -8,6 +8,7 @@ import SectionContainer from '@/components/SectionContainer'
 import Footer from '@/components/Footer'
 import siteMetadata from '@/data/siteMetadata'
 import { ThemeProviders } from './theme-providers'
+import { SaasMakerAnalytics } from '@/components/SaasMakerAnalytics'
 import { Metadata } from 'next'
 
 const space_grotesk = Space_Grotesk({
@@ -74,10 +75,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <body className="bg-white text-black antialiased dark:bg-gray-950 dark:text-white">
         <ThemeProviders>
-          {/* TODO: Enable saas-maker analytics when ready
-          import { SaasMakerAnalytics } from '@/components/SaasMakerAnalytics'
-          <SaasMakerAnalytics apiKey={process.env.NEXT_PUBLIC_SAASMAKER_API_KEY} />
-          */}
+          <SaasMakerAnalytics />
           <SectionContainer>
             <div className="flex h-screen flex-col justify-between font-sans">
               <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
