@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CURATOR | Digital Portfolio</title>
+<!-- Google Fonts: Noto Serif & Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary": "#e5e2e1",
+                    "tertiary": "#3b3b3b",
+                    "surface-container-highest": "#e4e2dd",
+                    "on-tertiary-fixed": "#ffffff",
+                    "secondary-fixed-dim": "#ababab",
+                    "primary": "#000000",
+                    "on-tertiary-fixed-variant": "#e2e2e2",
+                    "surface-container-high": "#eae8e3",
+                    "primary-container": "#3c3b3b",
+                    "surface-container-lowest": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "surface-variant": "#e4e2dd",
+                    "on-secondary-fixed": "#1b1b1b",
+                    "surface-dim": "#dbdad5",
+                    "tertiary-fixed-dim": "#474747",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "surface": "#fbf9f4",
+                    "outline-variant": "#c6c6c6",
+                    "surface-container-low": "#f5f3ee",
+                    "on-secondary-fixed-variant": "#3b3b3b",
+                    "primary-fixed-dim": "#474746",
+                    "on-primary-container": "#ffffff",
+                    "inverse-on-surface": "#f2f1ec",
+                    "inverse-surface": "#30312e",
+                    "on-tertiary-container": "#ffffff",
+                    "surface-tint": "#5f5e5e",
+                    "surface-container": "#f0eee9",
+                    "outline": "#777777",
+                    "inverse-primary": "#c8c6c5",
+                    "secondary": "#5e5e5e",
+                    "on-surface-variant": "#474747",
+                    "tertiary-fixed": "#5e5e5e",
+                    "surface-bright": "#fbf9f4",
+                    "error": "#ba1a1a",
+                    "secondary-fixed": "#c6c6c6",
+                    "on-tertiary": "#e2e2e2",
+                    "primary-fixed": "#5f5e5e",
+                    "on-primary-fixed": "#ffffff",
+                    "secondary-container": "#d4d4d4",
+                    "on-surface": "#1b1c19",
+                    "on-background": "#1b1c19",
+                    "tertiary-container": "#747474",
+                    "on-secondary-container": "#1b1b1b",
+                    "on-error-container": "#410002",
+                    "background": "#fbf9f4",
+                    "on-primary-fixed-variant": "#e5e2e1"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "display": ["Noto Serif"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fbf9f4;
+            color: #1b1c19;
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3 {
+            font-family: 'Noto Serif', serif;
+        }
+        .editorial-gap {
+            margin-bottom: 128px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#FBF9F4]/80 backdrop-blur-xl dark:bg-stone-950/80 flex justify-between items-center px-10 md:px-20 py-8 w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface" data-icon="menu">menu</span>
+<span class="font-['Noto_Serif'] text-2xl font-bold tracking-tighter text-[#1A1A1A] dark:text-stone-100">CURATOR</span>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-[#1A1A1A] dark:text-stone-100 font-medium border-b border-[#1A1A1A] dark:border-stone-100 font-['Noto_Serif'] tracking-tight text-lg" href="#">Portfolio</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-[#1A1A1A] dark:hover:text-stone-100 transition-colors font-['Noto_Serif'] tracking-tight text-lg" href="#">Archives</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-[#1A1A1A] dark:hover:text-stone-100 transition-colors font-['Noto_Serif'] tracking-tight text-lg" href="#">Essays</a>
+</nav>
+<button class="font-['Inter'] text-[10px] tracking-[0.2em] uppercase text-[#1A1A1A] border border-on-surface/20 px-6 py-2 hover:bg-primary hover:text-on-primary transition-all active:scale-95">Contact</button>
+</header>
+<main class="pt-40">
+<!-- Hero Section -->
+<section class="px-10 md:px-20 editorial-gap">
+<div class="max-w-6xl">
+<p class="font-label text-[10px] tracking-[0.3em] uppercase text-secondary mb-6">Digital Curator &amp; Cultural Architect</p>
+<h1 class="text-6xl md:text-9xl font-bold tracking-tighter leading-[0.85] mb-12">
+                    Curation is the <br/>
+<span class="italic font-normal">New Creation.</span>
+</h1>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-12">
+<p class="max-w-md text-lg leading-relaxed text-on-surface-variant font-light">
+                        Synthesizing the noise of the digital age into timeless narratives. Specializing in visual strategy, editorial direction, and the preservation of digital aesthetics.
+                    </p>
+<div class="flex items-center gap-4 group cursor-pointer">
+<span class="text-xs tracking-widest uppercase font-semibold">View Selected Works</span>
+<div class="w-12 h-[1px] bg-on-surface group-hover:w-20 transition-all duration-500"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Projects: Bento/Asymmetric Grid -->
+<section class="editorial-gap">
+<div class="px-10 md:px-20 mb-16 flex justify-between items-end">
+<h2 class="text-4xl font-bold tracking-tight">Selected Works</h2>
+<span class="font-label text-[10px] tracking-widest uppercase text-secondary">01 — 04 / Projects</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 px-10 md:px-20">
+<!-- Large Project -->
+<div class="md:col-span-8 group overflow-hidden">
+<div class="aspect-[16/10] bg-surface-container-low overflow-hidden relative">
+<img alt="Interior of a minimalist art gallery" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="minimalist art gallery with tall white walls, large floor-to-ceiling windows, and soft afternoon shadows casting geometric shapes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsLLXmd0cNy3C1ONrrJcj-5ZkRUPdR_obaUZi7w5qaj3zLtXaESPmpP72OFz5h6NQuEDGz5AM6uXVZwE-ZgNxs1GDSmmcTOe26OcSJDJRGAeueRKxS6zPhsOKZZQM0o2BYaj2mtiINLlFRJruS9xuwXhtg0k_Jiaw7_CYw3whTGD_6gCIbjL07N8I_0S5dO-xBP6bhTJIjYXoAx6oM3JXypuIhU4ksPpRZuKAcS1z1KGe9RtS_O6_LC99FtmmTsZKDWghT75m7qfQ"/>
+</div>
+<div class="mt-6 flex justify-between items-start">
+<div>
+<h3 class="text-2xl mb-1">Aesthetic Archetypes</h3>
+<p class="text-secondary font-body text-sm">Visual Identity &amp; Curation</p>
+</div>
+<span class="text-xs font-mono">2024</span>
+</div>
+</div>
+<!-- Small Project Top Right -->
+<div class="md:col-span-4 mt-0 md:mt-24 group overflow-hidden">
+<div class="aspect-square bg-surface-container-low overflow-hidden relative">
+<img alt="Minimalist book design" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="close-up of a high-end minimalist book cover with debossed serif typography on heavy textured cream paper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAM13KXl_yph-2JU1Ay8UNmmQ8e9pzKrsV5i1N_FyTax_sQw18-nIjmpI0JHak5CGf6dUbTRFzbyjl72VwYWhUrVjWynxv23u4TlyM5iq5reEvr8J-VU1V-88HZ2WcqBxBLDH6uiUOAt38D4Xr76ygvpPzB-i8QuWNoGG9l9wK14iKJDtJX9P0EgrplUGlYGur_es4D13Z_3at4ep0fqsWdIpjDGwIjLzj0tAB3WGIOB_T9LOtONg8in9gl9ebhc3lv5Z0BNHkRUk"/>
+</div>
+<div class="mt-6">
+<h3 class="text-xl mb-1">The Paper Archive</h3>
+<p class="text-secondary font-body text-sm">Print Publication</p>
+</div>
+</div>
+<!-- Small Project Bottom Left -->
+<div class="md:col-span-5 group overflow-hidden">
+<div class="aspect-[4/5] bg-surface-container-low overflow-hidden relative">
+<img alt="Architecture photography" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="brutalist architecture detail with stark sunlight hitting concrete surfaces creating high-contrast shadows and clean lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi6Ymir6IZDpi6B5E5VMF61PN3ABEtj8W-tKkVOUiOSE0H2fMs6C_-Vk3n9mpQsa9XlGTg_DBKDIqWM6_at78X2BHyaF6_Oi3a9LOaJXi1v3FOhR_bWTcito4s7RYZDhZ0kFDnIELme7eaX6RFXSlT16iMcMpdLWD0IDL9ILC6KSeq5c68r8AecCxHqxP5qPc6fh8k1C9EFPn4cEYMS8-5YJnPElfoj25SiiZC1nceI88BHW6EJYe98bL_85zXHIB1N_fBys-YuyY"/>
+</div>
+<div class="mt-6">
+<h3 class="text-xl mb-1">Form &amp; Void</h3>
+<p class="text-secondary font-body text-sm">Architectural Study</p>
+</div>
+</div>
+<!-- Medium Project Bottom Right -->
+<div class="md:col-span-7 md:-mt-32 group overflow-hidden">
+<div class="aspect-[1.2/1] bg-surface-container-low overflow-hidden relative">
+<img alt="Digital art projection" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="vibrant abstract digital art installation in a dark room with soft light reflections on a polished floor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCkqarT385UJIJE425B46SD8wtYQ-ggXKWtxJ4ZfxD4zQc6zORdaLIRKhRdfftQ1N46bs0z-w1kMKBfv7e_4aTtOHAHnOSd7Mew1ivb3KZ64jON8C4TjGVOir_2J7QPfJu0ln2cKF9OQfgBghvgDQ49lQoiiH-cEI3AV9j0gTPNnqTGyOk9KkHnMaCoOU1wx1kwx4maFQW4LYYOcrb1DULr8TfPqoHRvH6mZ-Z9DqHfKyFFW3AzA4Du-10WyDBYrKFWUXqJFM6P3w"/>
+</div>
+<div class="mt-6">
+<h3 class="text-2xl mb-1">Kinetic Landscapes</h3>
+<p class="text-secondary font-body text-sm">Digital Experience</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Writing Snippets -->
+<section class="bg-surface-container-low py-32 editorial-gap">
+<div class="px-10 md:px-20 flex flex-col md:flex-row gap-20">
+<div class="md:w-1/3">
+<h2 class="text-4xl font-bold tracking-tight sticky top-32">Essays &amp; <br/>Observations</h2>
+</div>
+<div class="md:w-2/3 border-t border-on-surface/10">
+<!-- Article 1 -->
+<a class="group block py-12 border-b border-on-surface/10 transition-colors hover:bg-surface-container-high px-4 -mx-4" href="#">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<span class="font-mono text-xs text-secondary">03.14.2024</span>
+<h3 class="text-3xl tracking-tight group-hover:italic transition-all">The Death of the Algorithm</h3>
+<span class="material-symbols-outlined text-secondary opacity-0 group-hover:opacity-100 transition-opacity" data-icon="north_east">north_east</span>
+</div>
+</a>
+<!-- Article 2 -->
+<a class="group block py-12 border-b border-on-surface/10 transition-colors hover:bg-surface-container-high px-4 -mx-4" href="#">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<span class="font-mono text-xs text-secondary">02.28.2024</span>
+<h3 class="text-3xl tracking-tight group-hover:italic transition-all">Tactile Interfaces in a Flat World</h3>
+<span class="material-symbols-outlined text-secondary opacity-0 group-hover:opacity-100 transition-opacity" data-icon="north_east">north_east</span>
+</div>
+</a>
+<!-- Article 3 -->
+<a class="group block py-12 border-b border-on-surface/10 transition-colors hover:bg-surface-container-high px-4 -mx-4" href="#">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<span class="font-mono text-xs text-secondary">01.12.2024</span>
+<h3 class="text-3xl tracking-tight group-hover:italic transition-all">Curating for Content Longevity</h3>
+<span class="material-symbols-outlined text-secondary opacity-0 group-hover:opacity-100 transition-opacity" data-icon="north_east">north_east</span>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="px-10 md:px-20 editorial-gap grid grid-cols-1 md:grid-cols-12 gap-20 items-center">
+<div class="md:col-span-5 relative">
+<div class="aspect-[3/4] bg-surface-container-highest overflow-hidden">
+<img alt="Portrait of the curator" class="w-full h-full object-cover filter grayscale" data-alt="sophisticated black and white portrait of a man in his 30s with a thoughtful expression, soft side-lighting, minimal background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbsEVKdvSFWjYPBFhrdJVz3Hk4hrQwx05GdbcvYqVSnru07tDOYGM8YOetC8SHq9crEyo1-UugudpqbI7rJwbTe40SeHMckRJfynkwwfC4fw1kX1RVj06EI4BiPUNx7_JZPw25F1SkbygGwvN3J8_BUPnYv2BysAMmuZEoVRvhIpkHjobNSBw7h4_Ek0Rz-fNxfa9pq37lDfDDtHMTIyWMmisoJWjQDsJZhZ8DmIOxqsMDNvpLmXLKlwTww_bUI2APRF03w84Vm4E"/>
+</div>
+<div class="absolute -bottom-8 -right-8 bg-surface p-8 md:block hidden">
+<p class="font-mono text-[10px] leading-relaxed uppercase tracking-tighter">EST. 2018 — LONDON <br/> TOKYO — NEW YORK</p>
+</div>
+</div>
+<div class="md:col-span-7">
+<p class="font-label text-[10px] tracking-[0.3em] uppercase text-secondary mb-8">About the Curator</p>
+<h2 class="text-5xl font-bold mb-12 leading-tight">Preserving meaning in an era of infinite content.</h2>
+<div class="space-y-8 text-lg font-light leading-relaxed text-on-surface-variant max-w-xl">
+<p>
+                        I work at the intersection of history and the future. My practice is dedicated to the meticulous selection and arrangement of ideas that stand the test of time.
+                    </p>
+<p>
+                        Through a decade of experience in digital strategy and brand narrative, I help creators and organizations move beyond the temporary and toward the significant. 
+                    </p>
+</div>
+<div class="mt-16 flex gap-12">
+<div>
+<p class="font-mono text-[10px] uppercase text-secondary mb-2">Social</p>
+<div class="flex gap-4 text-xs font-semibold uppercase tracking-widest">
+<a class="hover:underline underline-offset-4" href="#">IG</a>
+<a class="hover:underline underline-offset-4" href="#">TW</a>
+<a class="hover:underline underline-offset-4" href="#">LN</a>
+</div>
+</div>
+<div>
+<p class="font-mono text-[10px] uppercase text-secondary mb-2">Awards</p>
+<p class="text-xs font-semibold uppercase tracking-widest">Webby '23, Site of the Day</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#F5F3EE] dark:bg-stone-900 w-full mt-32 flex flex-col md:flex-row justify-between items-center px-10 md:px-20 py-16 gap-8">
+<div class="flex flex-col gap-2 items-center md:items-start">
+<span class="font-['Noto_Serif'] italic text-lg text-[#1A1A1A] dark:text-stone-100">Curator.</span>
+<p class="font-['Inter'] text-[10px] tracking-[0.2em] uppercase text-stone-500 dark:text-stone-400">© 2024 DIGITAL CURATOR. ALL RIGHTS RESERVED.</p>
+</div>
+<nav class="flex gap-10">
+<a class="font-['Inter'] text-[10px] tracking-[0.2em] uppercase text-stone-500 dark:text-stone-400 hover:text-[#1A1A1A] dark:hover:text-stone-100 transition-colors" href="#">Archives</a>
+<a class="font-['Inter'] text-[10px] tracking-[0.2em] uppercase text-stone-500 dark:text-stone-400 hover:text-[#1A1A1A] dark:hover:text-stone-100 transition-colors" href="#">Essays</a>
+<a class="font-['Inter'] text-[10px] tracking-[0.2em] uppercase text-stone-500 dark:text-stone-400 hover:text-[#1A1A1A] dark:hover:text-stone-100 transition-colors" href="#">Studio</a>
+</nav>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-stone-400" data-icon="share">share</span>
+<span class="material-symbols-outlined text-stone-400" data-icon="alternate_email">alternate_email</span>
+</div>
+</footer>
+</body></html>
