@@ -9,7 +9,7 @@
     "analyze": "cross-env ANALYZE=true next build",
     "lint": "next lint --fix --dir pages --dir app --dir components --dir lib --dir layouts --dir scripts",
     "cf:build": "opennextjs-cloudflare build",
-    "deploy": "pnpm cf:build && mkdir -p .pages-deploy && cp -r .open-next/assets/. .pages-deploy/ && cp -r .open-next/cloudflare .pages-deploy/ && cp -r .open-next/middleware .pages-deploy/ && cp -r .open-next/.build .pages-deploy/ && cp -r .open-next/server-functions .pages-deploy/ && cp .open-next/worker.js .pages-deploy/_worker.js && wrangler pages deploy --project-name=personalsite --branch=main"
+    "deploy": "pnpm cf:build && rm -rf .pages-deploy && mkdir -p .pages-deploy && cp -r .open-next/assets/. .pages-deploy/ && cp -r .open-next/cloudflare .pages-deploy/ && cp -r .open-next/middleware .pages-deploy/ && cp -r .open-next/.build .pages-deploy/ && cp -r .open-next/server-functions .pages-deploy/ && cp .open-next/worker.js .pages-deploy/_worker.js && node -e 'require(\"fs\").writeFileSync(\".pages-deploy/_routes.json\", JSON.stringify({version:1,include:[\"/*\"],exclude:[\"/_next/static/*\",\"/cdn-cgi/_next_cache/*\",\"/favicon.ico\",\"/static/*\",\"/feed.xml\"]}))' && wrangler pages deploy --project-name=personalsite --branch=main"
   },
   "dependencies": {
     "@next/bundle-analyzer": "16.2.4",
