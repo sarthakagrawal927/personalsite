@@ -2,6 +2,7 @@
 title: Review before June'25
 tags: ['review']
 date: '2025-06-03'
+type: 'Blog'
 ---
 
 I started out this year with reasonably ambitious goals. Alas, I am not close to any of them. But that doesn't mean I wasted my time.

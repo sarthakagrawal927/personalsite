@@ -1,8 +1,8 @@
 interface Project {
-  title: string
-  description: string
-  href: string
-  imgSrc?: string
+  title: string;
+  description: string;
+  href: string;
+  imgSrc?: string;
 }
 
 const projectsData: Project[] = [
@@ -33,7 +33,7 @@ const projectsData: Project[] = [
   {
     title: 'NanoClaw',
     description:
-      'A lightweight containerized messaging agent on Anthropic\'s Agents SDK — connects WhatsApp, Telegram, Slack, Discord, and Gmail with memory and scheduled jobs.',
+      "A lightweight containerized messaging agent on Anthropic's Agents SDK — connects WhatsApp, Telegram, Slack, Discord, and Gmail with memory and scheduled jobs.",
     href: 'https://github.com/sarthakagrawal927/nanoclaw',
   },
   {
@@ -84,6 +84,36 @@ const projectsData: Project[] = [
       'A productivity app that aims to do everything 4 other applications on my phone are not able to efficiently do. Designed to help people become the best version of themselves.',
     href: 'https://app.significanthobbies.com/',
   },
-]
+  {
+    title: 'Foundry (SaaS Maker)',
+    description:
+      'An industrial software factory and engineering system for managing multiple JS/TS projects at scale, standardizing shared logic and ESLint/TypeScript configs.',
+    href: 'https://github.com/sarthakagrawal927/saas-maker',
+  },
+  {
+    title: 'MAL Explorer',
+    description:
+      'A modern anime discovery platform that helps you find your next favorite show with advanced filtering, smart ranking, and Turso-backed personal watchlists.',
+    href: 'https://github.com/sarthakagrawal927/anime_list',
+  },
+  {
+    title: 'Today Little Log',
+    description:
+      'A calm, focused daily journal, habit tracker, and schedule planner built with React, Vite, TypeScript, and Turso/Drizzle.',
+    href: 'https://github.com/sarthakagrawal927/today-little-log',
+  },
+  {
+    title: 'CodeVetter',
+    description:
+      'AI code review platform for agent-generated code — desktop-first, works offline, built with Tauri and React.',
+    href: 'https://github.com/sarthakagrawal927/CodeVetter',
+  },
+  {
+    title: 'TrueHire',
+    description:
+      'A verified candidate platform that uses GitHub signals to generate a transparent 0-100 score, replacing traditional resumes.',
+    href: 'https://github.com/sarthakagrawal927/truehire',
+  },
+];
 
-export default projectsData
+export default projectsData;

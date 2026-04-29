@@ -63,9 +63,6 @@ module.exports = () => {
     reactStrictMode: true,
     typescript: { ignoreBuildErrors: true },
     pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
-    eslint: {
-      dirs: ['app', 'components', 'layouts', 'scripts'],
-    },
     images: {
       unoptimized: true,
       remotePatterns: [{ hostname: 'picsum.photos' }],

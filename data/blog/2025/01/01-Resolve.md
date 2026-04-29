@@ -2,6 +2,7 @@
 title: Resolve
 tags: ['review']
 date: '2025-01-01'
+type: 'Blog'
 ---
 
 ## Year in review
