@@ -27,6 +27,7 @@ jobs:
           cp -r .open-next/.build .pages-deploy/
           cp -r .open-next/server-functions .pages-deploy/
           cp .open-next/worker.js .pages-deploy/_worker.js
+          node -e 'require("fs").writeFileSync(".pages-deploy/_routes.json", JSON.stringify({version:1,include:["/*"],exclude:["/_next/static/*","/cdn-cgi/_next_cache/*","/favicon.ico","/static/*","/feed.xml"]}))'
       - name: Deploy to Cloudflare Pages
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
@@ -57,6 +58,7 @@ jobs:
           cp -r .open-next/.build .pages-deploy/
           cp -r .open-next/server-functions .pages-deploy/
           cp .open-next/worker.js .pages-deploy/_worker.js
+          node -e 'require("fs").writeFileSync(".pages-deploy/_routes.json", JSON.stringify({version:1,include:["/*"],exclude:["/_next/static/*","/cdn-cgi/_next_cache/*","/favicon.ico","/static/*","/feed.xml"]}))'
       - name: Deploy preview
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
