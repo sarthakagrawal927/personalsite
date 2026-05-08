@@ -7,6 +7,8 @@
     "build": "cross-env INIT_CWD=$PWD next build --webpack && node ./scripts/postbuild.mjs",
     "serve": "next start",
     "analyze": "cross-env ANALYZE=true next build",
+    "validate:projects": "node scripts/validate-projects.mjs",
+    "test": "pnpm validate:projects",
     "lint": "eslint .",
     "cf:build": "opennextjs-cloudflare build",
     "deploy": "pnpm cf:build && rm -rf .pages-deploy && mkdir -p .pages-deploy && cp -r .open-next/assets/. .pages-deploy/ && cp -r .open-next/cloudflare .pages-deploy/ && cp -r .open-next/middleware .pages-deploy/ && cp -r .open-next/.build .pages-deploy/ && cp -r .open-next/server-functions .pages-deploy/ && cp .open-next/worker.js .pages-deploy/_worker.js && node -e 'require(\"fs\").writeFileSync(\".pages-deploy/_routes.json\", JSON.stringify({version:1,include:[\"/*\"],exclude:[\"/_next/static/*\",\"/cdn-cgi/_next_cache/*\",\"/favicon.ico\",\"/static/*\",\"/feed.xml\"]}))' && wrangler pages deploy .pages-deploy --project-name=personalsite --branch=main"
@@ -54,7 +56,7 @@
     "@typescript-eslint/eslint-plugin": "^8.59.1",
     "@typescript-eslint/parser": "^8.59.1",
     "cross-env": "^10.1.0",
-    "eslint": "^10.2.1",
+    "eslint": "^9.39.2",
     "eslint-config-next": "16.2.4",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.5",
